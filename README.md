@@ -19,3 +19,5 @@ graph codegen && graph build
 graph auth --product hosted-service <TOKEN>
 graph deploy --product hosted-service <YOUR_SUBGRAPH>
 ```
+
+- [subgraph explorer](https://thegraph.com/hosted-service/subgraph/ameer-clara/honft-test)
