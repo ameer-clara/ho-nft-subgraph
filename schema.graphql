@@ -1,0 +1,9 @@
+type NewReview @entity {
+  id: ID!
+  sender: Bytes! # address
+  review: String! # string
+  rating: BigInt! # uint256
+  assetHash: String! # string
+  assetId: String! # string
+  chainId: BigInt! # uint256
+}

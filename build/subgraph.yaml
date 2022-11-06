@@ -1,0 +1,24 @@
+specVersion: 0.0.4
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: HumbleOpinion
+    network: goerli
+    source:
+      address: "0xC27Fa7815312cA5eD48cc61219A2cbb9D5975d5A"
+      abi: HumbleOpinion
+      startBlock: 7899376
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - NewReview
+      abis:
+        - name: HumbleOpinion
+          file: HumbleOpinion/abis/HumbleOpinion.json
+      eventHandlers:
+        - event: NewReview(address,string,uint256,string,string,uint256)
+          handler: handleNewReview
+      file: HumbleOpinion/HumbleOpinion.wasm
